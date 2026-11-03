@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dr Heiko Schilling</title>
+<meta name="description" content="I am a mathematician and engineering leader, 37 years into my career of shipping software products. Werkfreude gets me going.">
+<meta property="og:title" content="Dr Heiko Schilling">
+<meta property="og:description" content="I am a mathematician and engineering leader, 37 years into my career of shipping software products. Werkfreude gets me going.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://heikoschilling.com/">
+<meta property="og:image" content="https://heikoschilling.com/heiko-schilling.jpg">
+<meta name="theme-color" content="#0e1f40">
+<link rel="canonical" href="https://heikoschilling.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%230e1f40%22/%3E%3Cpath d=%22M10 26V6l14 6-14 6%22 fill=%22%23f4b740%22 stroke=%22%23f4b740%22 stroke-width=%222%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E">
+<link rel="preload" href="stix-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"STIX Two Text";src:url(stix-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"STIX Two Text";src:url(stix-400-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"STIX Two Text";src:url(stix-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+:root{--night:#0e1f40;--night-text:#eef2f9;--night-soft:#b4c2da;--road:#5a7199;--route:#f4b740;--paper:#ffffff;--ink:#16233d;--soft:#55617a;--link:#1b5bb5;--rule:#d9dfea}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font:400 1.125rem/1.6 "STIX Two Text",Georgia,"Times New Roman",serif;font-variant-numeric:lining-nums;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-underline-offset:.16em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid currentColor;outline-offset:2px;border-radius:2px}
+header{position:relative;background:var(--night);color:var(--night-text);overflow:hidden}
+header a{color:var(--night-text)}
+.map{position:absolute;inset:0;width:100%;height:100%;display:block}
+.roads{fill:none;stroke:var(--road);stroke-width:1.5;stroke-linecap:round;opacity:.42}
+.flags path{fill:var(--route);stroke:var(--route);stroke-width:1.2;opacity:.5}
+.route{fill:none;stroke:var(--route);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0;animation:drive 2.4s cubic-bezier(.45,.05,.3,1) .25s backwards}
+.start{fill:var(--night);stroke:var(--route);stroke-width:3}
+.ring{fill:none;stroke:var(--route);stroke-width:5}
+@keyframes drive{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.5rem}
+.intro{position:relative;padding:5rem 0 4.25rem;max-width:33rem}
+.intro::before{content:"";position:absolute;inset:0 -7rem 0 -100vw;background:linear-gradient(90deg,var(--night) calc(100% - 7rem),transparent);z-index:-1}
+header .wrap{position:relative;z-index:1}
+h1{font-size:clamp(2.6rem,6.4vw,4rem);line-height:1.04;font-weight:600;letter-spacing:-.012em}
+.tag{font-size:1.3rem;line-height:1.42;margin-top:1rem}
+.tag sup a{color:var(--route);text-decoration:none}
+sup{line-height:0;font-size:.75em}
+.contact{margin-top:1.25rem;color:var(--night-soft);font-size:1.0625rem}
+.contact li{display:inline}
+.contact li+li::before{content:", "}
+.contact ul{list-style:none;padding:0}
+main.wrap{padding-top:3.5rem;padding-bottom:2rem}
+h2{font-size:1.625rem;line-height:1.2;font-weight:600;margin:3rem 0 1.25rem}
+section:first-child h2{margin-top:0}
+h3{font-size:1.125rem;line-height:1.35;font-weight:600}
+.wins{list-style:none;padding:0;counter-reset:w;max-width:43rem;margin-left:11rem}
+.wins li{counter-increment:w;position:relative;margin-bottom:.8rem}
+.wins li::before{content:counter(w) "/";position:absolute;left:-2.4rem;color:var(--soft);font-style:italic}
+h2{margin-left:11rem}
+.role{display:grid;grid-template-columns:9.5rem minmax(0,43rem);column-gap:1.5rem;margin-bottom:1.75rem}
+.when{color:var(--soft);font-style:italic;font-size:1rem;line-height:1.45;padding-top:.08rem}
+.detail{color:var(--soft);font-style:italic;margin-bottom:.3rem;font-size:1.0625rem}
+.prose{max-width:43rem;margin-left:11rem}
+.prose p+p{margin-top:.8rem}
+footer.wrap{padding-top:2rem;padding-bottom:4rem;color:var(--soft);font-size:1rem}
+footer .inner{max-width:43rem;margin-left:11rem;border-top:1px solid var(--rule);padding-top:1.25rem}
+footer p+p{margin-top:.6rem}
+@media (max-width:52rem){
+ .map{position:relative;height:13.5rem}
+ .intro{padding:1.25rem 0 2.5rem;max-width:none}
+ .intro::before{display:none}
+ h2,.wins,.prose,footer .inner{margin-left:0}
+ .wins{padding-left:2.1rem}
+ .wins li::before{left:-2.1rem}
+ .role{grid-template-columns:minmax(0,1fr)}
+ .when{order:0;margin-bottom:.1rem}
+ main.wrap{padding-top:2.5rem}
+ body{font-size:1.0625rem}
+}
+@media (prefers-reduced-motion:reduce){.route{animation:none}}
+@media print{.map{display:none}header{background:none;color:#000}header a,.contact{color:#000}.intro{padding:0 0 1rem}.intro::before{display:none}body{font-size:10pt}h2,.wins,.prose,footer .inner{margin-left:0}.pdf{display:none}}
+</style>
+</head>
+<body>
+<header>
+<svg class="map" viewBox="0 0 1400 430" preserveAspectRatio="xMaxYMid slice" aria-hidden="true" focusable="false">
+<defs><clipPath id="me"><circle cx="1184" cy="228" r="84"/></clipPath></defs>
+<path class="roads" d="M851 181L951 206M71 467L47 568M1316 448L1415 451M698 34L732 126M118 -68L35 21M1313 -58L1403 -54M1429 6L1542 27M254 183L427 212M427 212L513 215M745 547L828 556M-33 567L47 568M-7 439L71 467M201 13L302 18M672 439L743 447M1296 554L1415 451M958 285L990 401M818 31L939 2M420 143L560 123M1297 100L1262 206M626 -36L786 -60M939 2L1093 24M1212 281L1188 391M-35 267L62 262M55 180L62 262M872 466L828 556M404 37L420 143M1393 389L1415 451M505 49L647 46M151 186L305 270M454 -32L520 -44M743 447L872 466M62 262L186 356M979 102L1093 24M973 -58L939 2M1285 48L1297 100M1335 267L1309 379M851 181L854 275M-17 -70L35 21M664 112L732 126M763 376L743 447M1231 129L1285 48M302 18L404 37M1086 285L1212 281M1309 379L1393 389M1429 6L1571 -50M404 37L505 49M647 46L664 112M652 283L608 380M951 206L958 285M1065 -61L1093 24M846 -70L973 -58M954 488L1080 370M1335 267L1454 271M990 401L1080 370M201 13L288 -83M838 362L872 466M672 439L763 376M1530 465L1511 536M522 467L540 537M608 380L763 376M763 376L854 275M225 475L315 446M420 143L505 49M520 -44L505 49M47 568L148 539M652 283L764 267M1065 -61L1184 -76M1086 285L1080 370M979 102L951 206M151 186L314 137M-7 439L-33 567M71 467L225 475M951 206L1057 203M35 21L201 13M183 88L151 186M664 112L630 201M1188 391L1316 448M270 529L407 544M540 537L609 551M828 556L983 534M1544 287L1486 394M609 551L745 547M-17 -70L118 -68M1415 451L1530 465M983 534L1065 541M302 18L314 137M1262 206L1390 196M1124 121L1057 203M954 488L983 534M1297 100L1427 115M973 -58L1065 -61M41 366L186 356M1214 444L1296 554M186 356L313 348M958 285L1086 285M201 13L183 88M35 21L58 110M55 180L151 186M1571 -50L1542 27M630 201L750 189M420 143L427 212M456 450L535 391M1427 115L1537 125M1390 196L1454 271M-40 387L41 366M1429 6L1427 115M1129 457L1214 444M1313 -58L1285 48M410 265L554 279M1184 -76L1162 47M151 186L209 275M1093 24L1231 129M872 466L954 488M750 189L764 267M954 488L1129 457M764 267L854 275M626 -36L647 46M-56 53L-8 117M-35 267L-40 387M786 -60L846 -70M560 123L630 201M1182 565L1296 554M183 88L314 137M732 126L896 97M763 376L838 362M1124 121L1231 129M1080 370L1188 391M314 137L254 183M1285 48L1429 6M1262 206L1335 267M513 215L630 201M-56 53L35 21M209 275L305 270M983 534L1129 457M1390 196L1537 125M1184 -76L1313 -58M1486 394L1530 465M216 -63L288 -83M1296 554L1415 565M151 186L254 183M1316 448L1296 554M750 189L896 97M522 467L672 439M456 450L407 544M1057 203L1086 285M647 46L698 34M990 401L954 488M35 21L183 88M58 110L201 13M1214 444L1316 448M698 34L818 31M314 137L420 143M1080 370L1129 457M118 -68L216 -63M315 446L456 450M1403 -54L1429 6M838 362L990 401M513 215L554 279M288 -83L454 -32M818 31L896 97M305 270L410 265M560 123L664 112M58 110L151 186M535 391L608 380M846 -70L818 31M1093 24L1162 47M664 112L750 189M1454 271L1544 287M786 -60L698 34M1212 281L1335 267M626 -36L698 34M672 439L609 551M1427 115L1505 183M456 450L522 467M554 279L535 391M1065 541L1182 565M732 126L818 31M428 361L456 450M305 270L313 348M-56 53L118 -68M743 447L745 547M1427 115L1390 196M-37 189L62 262M1309 379L1316 448M315 446L270 529M1188 391L1309 379M1231 129L1262 206M58 110L55 180M1184 228L1212 281M62 262L209 275M313 348L428 361M608 380L672 439M1537 125L1505 183M630 201L652 283M750 189L851 181M854 275L838 362M1415 565L1511 536M664 112L698 34M58 110L183 88M-40 387L-7 439M764 267L763 376M505 49L664 112M520 -44L626 -36M630 201L732 126M732 126L750 189M1542 27L1537 125M979 102L1124 121M896 97L851 181M1393 389L1486 394M209 275L186 356M62 262L41 366M1057 203L1184 228M1184 228L1262 206M854 275L958 285M1415 451L1415 565M1231 129L1297 100M-37 189L-35 267"/>
+<g class="flags"><path d="M3 218v-13l8 3.5-8 3.5"/><path d="M4 265v-13l8 3.5-8 3.5"/><path d="M-8 379v-13l8 3.5-8 3.5"/><path d="M102 18v-13l8 3.5-8 3.5"/><path d="M95 141v-13l8 3.5-8 3.5"/><path d="M241 15v-13l8 3.5-8 3.5"/><path d="M235 108v-13l8 3.5-8 3.5"/><path d="M185 239v-13l8 3.5-8 3.5"/><path d="M195 323v-13l8 3.5-8 3.5"/><path d="M343 26v-13l8 3.5-8 3.5"/><path d="M356 140v-13l8 3.5-8 3.5"/><path d="M347 268v-13l8 3.5-8 3.5"/><path d="M359 353v-13l8 3.5-8 3.5"/><path d="M444 42v-13l8 3.5-8 3.5"/><path d="M476 135v-13l8 3.5-8 3.5"/><path d="M467 271v-13l8 3.5-8 3.5"/><path d="M439 396v-13l8 3.5-8 3.5"/><path d="M569 74v-13l8 3.5-8 3.5"/><path d="M602 119v-13l8 3.5-8 3.5"/><path d="M538 253v-13l8 3.5-8 3.5"/><path d="M564 386v-13l8 3.5-8 3.5"/><path d="M654 72v-13l8 3.5-8 3.5"/><path d="M699 143v-13l8 3.5-8 3.5"/><path d="M643 250v-13l8 3.5-8 3.5"/><path d="M625 341v-13l8 3.5-8 3.5"/><path d="M712 71v-13l8 3.5-8 3.5"/><path d="M739 151v-13l8 3.5-8 3.5"/><path d="M758 236v-13l8 3.5-8 3.5"/><path d="M800 336v-13l8 3.5-8 3.5"/><path d="M849 58v-13l8 3.5-8 3.5"/><path d="M878 131v-13l8 3.5-8 3.5"/><path d="M896 279v-13l8 3.5-8 3.5"/><path d="M844 327v-13l8 3.5-8 3.5"/><path d="M1000 11v-13l8 3.5-8 3.5"/><path d="M968 144v-13l8 3.5-8 3.5"/><path d="M1009 285v-13l8 3.5-8 3.5"/><path d="M1026 389v-13l8 3.5-8 3.5"/><path d="M1148 66v-13l8 3.5-8 3.5"/><path d="M1167 124v-13l8 3.5-8 3.5"/><path d="M1136 283v-13l8 3.5-8 3.5"/><path d="M1082 336v-13l8 3.5-8 3.5"/><path d="M1109 422v-13l8 3.5-8 3.5"/><path d="M1134 38v-13l8 3.5-8 3.5"/><path d="M1244 160v-13l8 3.5-8 3.5"/><path d="M1201 260v-13l8 3.5-8 3.5"/><path d="M1198 347v-13l8 3.5-8 3.5"/><path d="M1263 80v-13l8 3.5-8 3.5"/><path d="M1283 143v-13l8 3.5-8 3.5"/><path d="M1231 215v-13l8 3.5-8 3.5"/><path d="M1306 243v-13l8 3.5-8 3.5"/><path d="M1319 335v-13l8 3.5-8 3.5"/><path d="M1265 425v-13l8 3.5-8 3.5"/><path d="M1371 23v-13l8 3.5-8 3.5"/><path d="M1339 200v-13l8 3.5-8 3.5"/><path d="M1359 385v-13l8 3.5-8 3.5"/></g>
+<path class="route" d="M41 366L62 262L55 180L151 186L254 183L427 212L513 215L630 201L750 189L851 181L951 206L1057 203L1184 228" pathLength="1"/>
+<circle class="start" cx="41" cy="366" r="7"/>
+<image href="heiko-schilling.jpg" x="1100" y="144" width="168" height="168" clip-path="url(#me)"/>
+<circle class="ring" cx="1184" cy="228" r="84"/>
+</svg>
+<div class="wrap"><div class="intro">
+<h1>Dr Heiko Schilling</h1>
+<p class="tag">I am a mathematician and engineering leader, 37 years into my career of shipping software products. Werkfreude<sup><a href="#werkfreude" aria-label="What Werkfreude means">*</a></sup> gets me going.</p>
+<div class="contact"><ul><li>Cologne, Germany</li><li><a href="mailto:heiko.schilling@gmail.com">heiko.schilling@gmail.com</a></li><li><a href="https://www.linkedin.com/in/heikoschilling/">linkedin.com/in/heikoschilling</a></li></ul></div>
+</div></div>
+</header>
+<main class="wrap">
+<section>
+<h2>Biggest wins</h2>
+<ol class="wins">
+<li>Transformed an organisation of 10,000 people and over EUR 1B a year at Stellantis in the Software Reset. Vehicle OS and SmartCockpit for 14 car brands reached their Manufacturing Readiness Milestone, and the backend serves more than 15M connected cars.</li>
+<li>Met 100 times the demand for essential goods at Amazon during COVID and launched 4 new country marketplaces (SA, SE, PL, EG).</li>
+<li>Shipped a new routing algorithm that ran up to 1,470 times faster than Dijkstra to 130M TomTom drivers, which made TomTom world leading in navigation and led to 10 US patents.</li>
+<li>Co founded my first company at 15 and sold it at 21.</li>
+</ol>
+</section>
+<section>
+<h2>Experience</h2>
+<article class="role"><p class="when">since 2023, Chair since March 2025</p><div><h3>Chair of the Board, MobileDrive</h3><p class="detail">Foxconn (Hon Hai) and Stellantis joint venture</p><p>Brought the consumer electronics excellence of Foxconn, the largest iPhone assembler, together with automotive quality processes. Foxconn became a top supplier of in car connectivity antenna systems to Stellantis, and was a <a href="https://www.globenewswire.com/news-release/2025/10/29/3176398/0/en/Stellantis-Recognizes-54-Global-Suppliers-at-Fifth-Annual-Supplier-of-the-Year-Ceremony-in-Paris.html">nominee at the Stellantis 2025 Supplier of the Year awards</a>. Completed the refocus of the business.</p></div></article><article class="role"><p class="when">since Aug 2022</p><div><h3>SVP Software &amp; AI Engineering, Stellantis</h3><p class="detail">10,000 people and EUR 1B+ budget at peak, 5,000 today</p><p>Transformed an organisation of 10,000 people in the Software Reset, to deliver one software and electronics stack for 14 car brands. Took the backend and mobile app to more than 15M connected cars, with an app start of 2 seconds and onboarding in about 5 minutes. Took Vehicle OS and SmartCockpit to their Manufacturing Readiness Milestone in May 2026, ahead of customer launch in 2027. Built L2+ in house and reached its Technology Readiness Milestone in February 2026. Built L2++ with Wayve, from handshake to first prototype in under two months, for launch in 2028. Cut development cycles from 4 years to under 2 with Applied Intuition. Raised hands on keyboard from 22 percent to 91 percent by retraining and hiring internal engineers. Cut handoffs by 50 percent and cockpit complexity by 40 percent. Put more than 1,300 engineers on AI tools, achieved a 10 percent efficiency gain and stayed on target for 30 percent by March 2027.</p></div></article><article class="role"><p class="when">Mar 2020 to Aug 2022</p><div><h3>Leader International Tech Expansion, Amazon</h3><p class="detail">Luxembourg, 1,500 people, EUR 200M budget</p><p>Led the team that took Amazon into new countries. Met 100 times the normal demand during COVID across more than 40 essential goods categories, so people who could not leave home still got what they needed. Launched 4 new country marketplaces, Saudi Arabia, Sweden, Poland and Egypt, and prepared the launches of Belgium and Ireland. Doubled the number of supported languages to 27. Made new store launches 2 to 3 times faster and new language launches 10 times faster. Quadrupled the team while working fully remotely, and raised productivity.</p></div></article><article class="role"><p class="when">Jan 2007 to Feb 2020</p><div><h3>VP Software Engineering, Head of Navigation, TomTom Fellow, TomTom</h3><p class="detail">Amsterdam, 500 people, EUR 45M budget</p><p>Designed, built and shipped the routing for 130M drivers, which made TomTom world leading in routing benchmarks. Took automotive from zero to 10 percent market share with more than 50 in car programmes, and built a profitable navigation software business. Created a hiring process that picked the top 1 percent of 15,000 applications a year in under 6 weeks, which TomTom adopted company wide. Hired about 800 people. Appointed by the Management Board as one of the first 5 Fellows among 5,500 people. Protected arc flags on a device, time dependent routing and on time arrival with <a href="https://patents.google.com/patent/US8788202B2/en">10 US patents</a>. The <a href="https://arxiv.org/pdf/1504.05140">field's standard survey</a> says that TomTom uses a variant of arc flags. The papers on contraction hierarchies and Microsoft CRP, the methods behind OSRM and Bing Maps, cite this work. Engineers at Google, Apple and Uber have said that these papers are the foundation of their routing.</p></div></article><article class="role"><p class="when">2003 to 2006</p><div><h3>Partner, <a href="http://algorithmic-consultants.com">Algorithmic Consultants</a></h3><p class="detail">under 10 people</p><p>Solved a 3SAT problem that unblocked the launch of the BMW 5 Series.</p></div></article><article class="role"><p class="when">1999 to 2001</p><div><h3>Freelancer team</h3><p class="detail">about 10 people</p><p>Helped Deutsche Telekom through Y2K with a rollout to 3,000 PCs. Fixed and maintained the server landscape and network of the Deutsche Rentenversicherung, with 36,000 servers for 80,000 staff.</p></div></article><article class="role"><p class="when">1989 to 1995</p><div><h3>Co founder and MD, Brand &amp; Partner</h3><p class="detail">under 5 people</p><p>Sold an online bookshop system to more than 80 bookshops across Germany, Austria and Switzerland before the web existed. Sold the company to Schweitzer Fachinformationen in 1995.</p></div></article>
+</section>
+<section class="after">
+<h2>Boards</h2>
+<div class="prose"><p>Sat on the Technology Advisory Board of Gousto from 2018 to 2022, and Gousto became a unicorn in 2022. Served as a Non Executive Director at Greater Than in Stockholm in 2022 and on the NAVA Advisory Board from 2017 to 2021.</p></div>
+</section>
+<section class="after">
+<h2>Education and research</h2>
+<div class="prose">
+<p>PhD in algorithms, TU Berlin, 2006, with about a year at ETH Zürich, nominated for two dissertation awards. Executive MBA, Cambridge, 2016. Diplom in Mathematics with Computer Science, Göttingen, 2000, with a year at Oxford. German and English.</p>
+<p>Cut the operating costs of the Swiss Federal Railways Cargo Express service by 30 percent, or EUR 3M a year, through research. Published 12 academic works with more than 1,200 citations on <a href="https://scholar.google.com/citations?user=kgHvbA0AAAAJ">Google Scholar</a>.</p>
+<p>Build AI agents for my own work. Let <a href="https://substack.com/@heikoschilling">Claude predict 104 World Cup games</a>, and my son nearly beat it.</p>
+</div>
+</section>
+</main>
+<footer class="wrap"><div class="inner">
+<p id="werkfreude">* Werkfreude is the joy of building things that work. It was my grandmother's word for it.</p>
+<p class="pdf"><a href="Heiko-Schilling-CV-public-v19.pdf">Download this resume as a PDF</a></p>
+<p class="pdf"><a href="impressum.html" lang="de">Impressum</a>, <a href="datenschutz.html" lang="de">Datenschutz</a></p>
+</div></footer>
+</body>
+</html>
